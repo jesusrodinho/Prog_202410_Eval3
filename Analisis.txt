@@ -1,0 +1,35 @@
+Problema : Filtrar señales utilizando la función de probabilidad de la campana de Gauss.
+
+El filtrado de señales utilizando la función de densidad de probabilidad de la campana de Gauss esta dado por: 
+𝑓(𝑥)=( 1 / 𝜎 √2 𝜋 ) * 𝑒 ^( −1 / 2 ((𝑥 − 𝜇 / 𝜎 ) ^ 2 ))
+
+Entrada(s): 
+- Un número entero no negativo ingresado por el usuario.
+- Variable de entrada: f (de tipo entero).
+
+Salida(s):
+- Un mensaje indicando si la señal pasa o es bloqueada por el filtro.
+
+Constantes:
+- La media estándar dada por el problema.
+- La desviación estándar dada por el problema.
+- El umbral de probabilidad acumulada  
+- El valor de 𝑒
+- El valor de 𝜋
+
+Otras variables:
+- El iterador utilizado en el ciclo.
+- El resultado
+- La probabilidad acumulada
+
+Proceso(s):
+- Se debe solicitar la frecuencia de la señal (colocar un input).
+- Se verifica que la frecuencia ingresada sea un número real mayor que cero. Si no lo es, muestra un mensaje de error y termina el programa.
+- Inicializar una variable donde se guardará el resultado.
+- Inicia un bucle For para iterar sobre cada valor de frecuencia desde 1 hasta el valor ingresado por el usuario. Dentro del bucle, calcula la probabilidad de que la señal tenga esa frecuencia utilizando la función de densidad de probabilidad de la distribución normal y suma estos valores a la probabilidad acumulada.
+- En cada iteración, se sigue la formula y se guarda la probabilidad acumulada.
+- Finalmente, se compara la probabilidad acumulada con el umbral definido. Si la probabilidad acumulada es mayor que el umbral, muestra un mensaje indicando que la señal pasa el filtro. De lo contrario, muestra un mensaje indicando que la señal es bloqueada por el filtro.
+
+Restricciones: 
+- Aplica para números enteros no negativos -> Se debe validar el signo
+- La validación se puede hacer con un condicional que verifique que el valor ingresado es un número entero positivo. De lo contrario, indicarle al usuario para que intente nuevamente o finalizar el programa. Como esto no se indica, se procederá a indicar el error y finalizar.
