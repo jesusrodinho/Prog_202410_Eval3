@@ -1,0 +1,39 @@
+Program_filtrado_de_las_señales
+// Programa para simular el filtrado de las señales de acuerdo a la función de densidad de probabilidad
+
+Start
+
+    // Declaración de constantes y variables
+    Declare Constant MEDIA = 1000 // Media estándar dada
+    Declare Constant DESVIO = 300 // Desviación estándar dada
+    Declare Constant UMBRAL = 0.3 // Umbral de probabilidad acumulada
+    Declare Constant PI = 3.14159 // Valor de Pi
+    Declare Constant EULER = 2.7182 // Valor de Euler
+    Declare Real f, resultado, probabilidad_acumulada // Variables para frecuencia, resultado y probabilidad acumulada
+    Declare Integer i // Representa el iterador
+
+	// Entrada de frecuencia
+	Display "Ingrese la frecuencia de la señal: "
+	Input f
+	// Validación de la frecuencia
+	If f <= 0 Then
+		Display "La frecuencia de la señal debe ser mayor que cero."
+		End
+	End If
+	
+	probabilidad_acumulada = 0
+
+	// Cálculo de la probabilidad acumulada utilizando la función de densidad de probabilidad
+	For i = 1 To f Then
+		resultado = ((1 / (DESVIO * ((2 * PI)^(1/2)))) * EULER^((-1/2) * ((i - MEDIA) / DESVIO)^2 ))
+		probabilidad_acumulada = probabilidad_acumulada + resultado
+	End For
+
+	//Mostrar resultado 
+	If probabilidad_acumulada > UMBRAL then
+		Display "La señal pasa el filtro."
+	Else
+		Display "La señal es bloqueada por el filtro."
+	End If
+
+	End
