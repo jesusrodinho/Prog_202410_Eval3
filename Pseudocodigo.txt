@@ -2,7 +2,7 @@ Program_filtrado_de_las_señales
 // Programa para simular el filtrado de las señales de acuerdo a la función de densidad de probabilidad
 
 Start
-// Declaración de constantes y variables
+	// Declaración de constantes y variables
 	Declare Constant MEDIA = 1000 // Media estándar dada
 	Declare Constant DESVIO = 300 // Desviación estándar dada
 	Declare Constant UMBRAL = 0.3 // Umbral de probabilidad acumulada
