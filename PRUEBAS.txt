@@ -1,0 +1,72 @@
+PRUEBAS
+
+prueba 1:
+
+Iniciar filtrador_de_señales
+MEDIA, DESVIO, UMBRAL, PI, EULER, f, r, pa, i
+Si el usuario ingresa 0
+Como 0 es igual a 0 se muestra "error" y se termina el programa
+
+prueba 2:
+Iniciar filtrador_de_señales
+MEDIA, DESVIO, UMBRAL, PI, EULER, f, r, pa, i
+Si el usuario ingresa 0
+Como -100 es menor a 0 se muestra "error" y se termina el programa
+
+
+prueba 3:
+Iniciar filtrador_de_señales
+MEDIA, DESVIO, UMBRAL, PI, EULER, f, r, pa, i
+Si el usuario ingresa 2
+Como f es mayor que 0 entonces
+p_total = 0
+Se ejecuta el ciclo
+Iteracion #1:
+i = 1
+r = (1 / (300 * math.sqrt(2 * PI))) * EULER(-0.5 * ((1 - 1000) / 300) ** 2) = 
+p_total = 0 + 0.0089439639
+Iteracion #2:
+i = 2
+r = (1 / (300 * math.sqrt(2 * PI))) * EULER(-0.5 * ((2 - 1000) / 300) ** 2) = 
+p_total = 0.0089439639 + 0.008926067
+como p_total = 0.017870039 entonces
+p_total < UMBRAL por lo tanto no pasaria el filtro
+
+
+prueba 4:
+Iniciar filtrador_de_señales
+MEDIA, DESVIO, UMBRAL, PI, EULER, f, r, pa, i
+Si el usuario ingresa 1000
+Como f es mayor que 0 entonces
+p_total = 0
+Se ejecuta el ciclo desde la iteracion #1 hasta 1000:
+Iteracion #1:
+i = 1
+r = (1 / (300 * math.sqrt(2 * PI))) * EULER(-0.5 * ((1 - 1000) / 300) ** 2) = 
+p_total = 0 + 0.0089439639
+Iteracion #2:
+i = 2
+r = (1 / (300 * math.sqrt(2 * PI))) * EULER(-0.5 * ((2 - 1000) / 300) ** 2) = 
+p_total = 0.0089439639 + 0.008926067
+Iteracion #3:
+i = 3
+r = (1 / (300 * math.sqrt(2 * PI))) * EULER(-0.5 * ((3 - 1000) / 300) ** 2) = 
+p_total = 0.017870039 + 0.0089081881
+Iteracion #4:
+i = 4
+r = (1 / (300 * math.sqrt(2 * PI))) * EULER(-0.5 * ((4 - 1000) / 300) ** 2) = 
+p_total = 0.0178342551 + 0.008926067
+
+....
+
+Iteracion # 1000:
+i = 1000
+r = (1 / (300 * math.sqrt(2 * PI))) * EULER(-0.5 * ((1000 - 1000) / 300) ** 2) = 
+p_total = 2.385969045(aprox) + 0
+como p_total = 2.385969045 entonces
+p_total > UMBRAL por lo tanto pasaria el filtro
+
+
+
+
+
