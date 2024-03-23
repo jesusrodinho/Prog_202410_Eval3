@@ -8,7 +8,7 @@ Start
 	Declare Constant UMBRAL = 0.3 // Umbral de probabilidad acumulada
 	Declare Constant PI = 3.14159 // Valor de Pi
 	Declare Constant EULER = 2.7182 // Valor de Euler
-	Declare Real f, resultado, probabilidad_acumulada // Variables para frecuencia, resultado y probabilidad acumulada
+	Declare Real f, r, p_total // Variables para frecuencia, resultado y probabilidad acumulada
 	Declare Integer i // Representa el iterador
 
 	// Mensaje de Bienvenida
@@ -28,12 +28,12 @@ Start
 
 	// Cálculo de la probabilidad acumulada utilizando la función de densidad de probabilidad
 	For i = 1 To f Then
-		resultado = ((1 / (DESVIO * ((2 * PI)^(1/2)))) * EULER^((-1/2) * ((i - MEDIA) / DESVIO)^2 ))
-		probabilidad_acumulada = probabilidad_acumulada + resultado
+		r = ((1 / (DESVIO * ((2 * PI)^(1/2)))) * EULER^((-1/2) * ((i - MEDIA) / DESVIO)^2 ))
+		p_total = p_total + r
 	End For
 
 	//Se muestra el resultado 
-	If probabilidad_acumulada > UMBRAL then
+	If p_total > UMBRAL then
 		Display "La señal pasa el filtro."
 	Else
 		Display "La señal es bloqueada por el filtro."
