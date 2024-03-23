@@ -28,7 +28,7 @@ Start
 
 	// Cálculo de la probabilidad acumulada utilizando la función de densidad de probabilidad
 	For i = 1 To f Then
-		r = ((1 / (DESVIO * ((2 * PI)^(1/2)))) * EULER^((-1/2) * ((i - MEDIA) / DESVIO)^2 ))
+		r = ((1 / (DESVIO * ((2 * PI)^(1/2)))) * EULER^((-1/2) * ((f - MEDIA) / DESVIO)^2 ))
 		p_total = p_total + r
 	End For
 
