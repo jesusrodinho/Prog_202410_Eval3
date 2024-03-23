@@ -65,6 +65,11 @@ r = (1 / (300 * math.sqrt(2 * PI))) * EULER(-0.5 * ((1000 - 1000) / 300) ** 2) =
 p_total = 2.385969045(aprox) + 0
 como p_total = 2.385969045 entonces
 p_total > UMBRAL por lo tanto pasaria el filtro
+-------------------
+
+Pregunta:
+"¿para qué valor de frecuencia la señal deja de ser bloqueada?"
+Respuesta : Para el valor 586 de frecuencia en adelante
 
 
 
